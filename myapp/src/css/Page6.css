@@ -1,0 +1,143 @@
+/* Custom container for Page 6 */
+#page6-container {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Styling for page title */
+#page6-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Container for feature cards */
+#feature-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align the feature cards */
+  gap: 20px; /* Gap between the cards */
+  margin-top: 20px; /* Add margin-top for spacing */
+}
+
+/* Styling for each feature card */
+.feature-card {
+  border-radius: 20px;
+  height: auto; /* Allow the height to adjust automatically based on content */
+  padding: 20px; /* Reduced padding for smaller cards */
+  width: calc(25% - 40px); /* Four cards in a row by default */
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Hover effect to change card color on mouseover */
+.feature-card:hover {
+  transform: scale(1.05);
+  background-color: #F1F1F1; /* Light gray for hover effect */
+}
+
+/* Styling for images inside feature cards */
+.feature-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px; /* Add padding inside the image area */
+}
+
+/* Icon container styling */
+.icon-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Title of each feature card */
+.card-title {
+  color: #1B1F3B;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Description of each feature card */
+.card-description {
+  color: #1B1F3B;
+  font-size: 14px; /* Reduced font size for smaller description */
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Extra description styling */
+.extra-description {
+  font-size: 12px; /* Smaller font size for extra content */
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styling */
+
+/* For devices with width 768px or less (tablets and small devices) */
+@media screen and (max-width: 768px) {
+  .feature-card {
+    width: calc(50% - 40px); /* Two cards in a row */
+  }
+  #page6-title {
+    font-size: 40px; /* Adjust title font size */
+  }
+  .card-title {
+    font-size: 20px; /* Adjust card title font size */
+  }
+  .card-description {
+    font-size: 12px; /* Adjust card description font size */
+  }
+  .extra-description {
+    font-size: 10px; /* Adjust extra description font size */
+  }
+}
+
+/* For devices with width 480px or less (mobile devices) */
+@media screen and (max-width: 480px) {
+  .feature-card {
+    width: 100%; /* Full width for each card */
+  }
+  #page6-title {
+    font-size: 30px; /* Adjust title font size */
+  }
+  .card-title {
+    font-size: 18px; /* Adjust card title font size */
+  }
+  .card-description {
+    font-size: 12px; /* Adjust card description font size */
+  }
+  .extra-description {
+    font-size: 10px; /* Adjust extra description font size */
+  }
+}

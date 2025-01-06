@@ -1,0 +1,139 @@
+/* Basic styles for the container */
+.page2-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #E2F0FB;
+}
+
+/* Title styles */
+.page2-title {
+  font-size: 4.3em;
+  margin-bottom: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Cards container */
+.page2-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Card base styles */
+.page2-card, 
+.page2-cardone {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #E2F0FB;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page2-card:hover, 
+.page2-cardone:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternate background color for the second card */
+.page2-cardone {
+  background-color: #FEF3E3;
+}
+
+/* Card title styles */
+.page2-card-title {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Description text */
+.page2-card-description {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Links */
+.page2-card-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.page2-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+.page2-card img, 
+.page2-cardone img {
+  width: 70%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .page2-card, .page2-cardone {
+    width: 45%;
+  }
+  .page2-title {
+    font-size: 3em;
+  }
+  .page2-card img, .page2-cardone img {
+    width: 60%;
+    max-width: 350px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page2-card, .page2-cardone {
+    width: 90%;
+  }
+  .page2-title {
+    font-size: 2.5em;
+  }
+  .page2-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page2-card img, .page2-cardone img {
+    width: 50%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .page2-title {
+    font-size: 2em;
+  }
+  .page2-card, .page2-cardone {
+    width: 100%;
+    padding: 15px;
+  }
+  .page2-card img, .page2-cardone img {
+    width: 40%;
+    max-width: 250px;
+  }
+}

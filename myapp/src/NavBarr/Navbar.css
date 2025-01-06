@@ -1,0 +1,116 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  opacity: 0; /* Initial state for GSAP animation */
+  transform: translateY(-20px);
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #4285f4;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger .line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links by default */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+  }
+
+  .navbar-links.mobile-open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo a {
+    font-size: 1.5rem; /* Smaller logo text for small screens */
+  }
+
+  .navbar-links li a {
+    font-size: 1rem; /* Smaller link text */
+  }
+}

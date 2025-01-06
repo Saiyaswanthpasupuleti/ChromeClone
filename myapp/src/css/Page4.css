@@ -1,0 +1,64 @@
+/* Custom container to wrap everything */
+.page4-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Image container styles */
+.page4-image-container {
+  flex: 1 1 40%; /* Take up 40% of the space, adjust for smaller screens */
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.page4-image-container img {
+  max-width: 100%; 
+  height: auto; 
+  max-height: 600px;
+}
+
+/* Text container styles */
+.page4-text-container {
+  flex: 1 1 50%; /* Take up 50% of the space */
+  border-left: 2px solid #ccc;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.page4-heading {
+  font-size: 24px; 
+  margin-bottom: 15px;
+}
+
+.page4-paragraph {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page4-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center-align content */
+    padding: 10px;
+  }
+
+  .page4-text-container {
+    border-left: none; /* Remove border on smaller screens */
+    padding-left: 0;
+  }
+
+  .page4-heading {
+    font-size: 20px;
+  }
+
+  .page4-paragraph {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Custom container for Page 5 */
+.page5-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  gap: 40px; /* Add space between text and image */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Text container styles */
+.page5-text-container {
+  flex: 1;
+  text-align: left;
+}
+
+/* Image container styles */
+.page5-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+
+.page5-image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Explore button styles */
+.page5-explore-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.page5-explore-button:hover {
+  background-color: #357ae8; /* Darker blue on hover */
+}
+
+/* Heading and subheading styles */
+.page5-heading {
+  font-size: 45px;
+}
+
+.page5-subheading {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page5-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .page5-text-container {
+    order: 2; /* Place text below the image */
+  }
+
+  .page5-heading {
+    font-size: 35px; /* Adjust heading size for smaller screens */
+  }
+
+  .page5-subheading {
+    font-size: 16px;
+  }
+
+  .page5-image-container img {
+    max-height: 300px; /* Limit image height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .page5-heading {
+    font-size: 28px;
+  }
+
+  .page5-subheading {
+    font-size: 14px;
+  }
+
+  .page5-explore-button {
+    padding: 10px 20px; /* Adjust button size for smaller screens */
+  }
+}

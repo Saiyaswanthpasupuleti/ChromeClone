@@ -1,0 +1,39 @@
+.page11-container {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #E2F0FB; /* Optional: Add a background color */
+  }
+  
+  .page11-title {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #333; /* Optional: Add text color */
+  }
+  
+  .feature-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px; /* Add space between images */
+    height: auto; /* Allow the container to grow dynamically */
+    padding-bottom: 200px; /* Add space at the bottom for smoother scrolling */
+  }
+  
+  .feature-image {
+    max-width: 80%; /* Scale down the image size */
+    height: auto;
+    object-fit: cover;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .page11-title {
+      font-size: 30px;
+    }
+  
+    .feature-image {
+      max-width: 100%; /* Adjust image size for smaller screens */
+    }
+  }
+  

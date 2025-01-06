@@ -1,0 +1,150 @@
+.page1-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #E2F0FB; /* Applying the same background color to the container */
+}
+
+/* Hero Section */
+.hero-section-unique {
+    background: #E2F0FB; /* Apply the same background color to hero section */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.hero-content-unique {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chrome-logo-unique {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Hero Title */
+.hero-title-unique {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Hero Description */
+.hero-description-unique {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons-unique {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons-unique button {
+    background-color: #4285f4;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-buttons-unique button:hover {
+    background-color: #357ae8;
+}
+
+.additional-info-unique p,
+.additional-info-unique h3,
+.additional-info-unique h4 {
+    margin: 0.5rem 0;
+}
+
+/* Images Scroll Section */
+.images-scroll-container-unique {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    background: #E2F0FB; /* Applying the same background color to the scroll section */
+}
+
+.scrollable-images-unique {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll-image-unique {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chrome-logo-unique {
+        width: 60px;
+    }
+
+    .hero-title-unique {
+        font-size: 1.5rem;
+    }
+
+    .hero-description-unique {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons-unique button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .scrollable-images-unique {
+        gap: 0.5rem;
+    }
+
+    .scroll-image-unique {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chrome-logo-unique {
+        width: 50px;
+    }
+
+    .hero-title-unique {
+        font-size: 1.2rem;
+    }
+
+    .hero-description-unique {
+        font-size: 1rem;
+    }
+
+    .cta-buttons-unique button {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .scrollable-images-unique {
+        gap: 0.3rem;
+    }
+
+    .scroll-image-unique {
+        width: 150px;
+    }
+}
