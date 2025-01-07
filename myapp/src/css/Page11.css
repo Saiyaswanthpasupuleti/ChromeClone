@@ -1,39 +1,36 @@
-.page11-container {
-    text-align: center;
-    padding: 100px 0;
-    background-color: #E2F0FB; /* Optional: Add a background color */
+.container {
+    overflow: hidden; /* Hide horizontal scrollbars */
+    position: relative;
+    width: 100%; /* Ensure it doesn't extend beyond the viewport */
   }
   
-  .page11-title {
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: #333; /* Optional: Add text color */
-  }
-  
-  .feature-images {
+  .card-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    will-change: transform; /* Improve performance */
+    position: relative;
+    width: 500%; /* Dynamically match the number of cards (5 cards = 500%) */
+    transform: translateX(0); /* Ensure no initial offset */
+  }
+  
+  .card {
+    min-width: 80vw; /* Decrease the card width to reduce image size */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 100px; /* Add space between images */
-    height: auto; /* Allow the container to grow dynamically */
-    padding-bottom: 200px; /* Add space at the bottom for smoother scrolling */
   }
   
-  .feature-image {
-    max-width: 80%; /* Scale down the image size */
-    height: auto;
-    object-fit: cover;
-    opacity: 0; /* Hidden initially */
-    transition: opacity 1s ease, transform 1s ease;
+  .card img {
+    max-width: 80%; /* Reduce the image size to 80% of the card width */
+    max-height: 80vh; /* Ensure the image doesn't exceed 80% of the viewport height */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+    border-radius: 10px; /* Optional: Add rounded corners */
   }
   
-  @media (max-width: 768px) {
-    .page11-title {
-      font-size: 30px;
-    }
-  
-    .feature-image {
-      max-width: 100%; /* Adjust image size for smaller screens */
-    }
+  /* Important: Hide any global horizontal overflow */
+  body {
+    margin: 0;
+    overflow-x: hidden;
   }
   

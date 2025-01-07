@@ -114,3 +114,11 @@
     font-size: 1rem; /* Smaller link text */
   }
 }
+.navbar {
+  /* ... other styles ... */
+  transition: visibility 0.3s ease-in-out; /* Smooth visibility transition */
+}
+
+.navbar.hidden {
+  visibility: hidden; /* Hide the navbar when necessary */
+}

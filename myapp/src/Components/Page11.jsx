@@ -50,9 +50,9 @@ export default function Page11() {
 
   return (
     <div className="page11-container">
-        <h1 style={{fontSize:"50px"}}>The <span style={{color:"orange"}}>Fast </span>way to do things online</h1>
+       <h1 style={{fontSize:"50px",textAlign:"center"}}>The <span style={{color:"orange"}}>Fast </span>way to do things online</h1>
       <div className="feature-images">
-
+  
       <img className="feature-image" src={myimage5} alt="Image 5" />
         <img className="feature-image" src={myimage3} alt="Image 3" />
       

@@ -1,7 +1,8 @@
-/* Custom container for Page 6 */
+/* Container for Page 6 */
 #page6-container {
   text-align: center;
   padding: 50px;
+  background-color: #ffffff; /* Set background color to white */
 }
 
 /* Styling for page title */
@@ -24,10 +25,10 @@
 
 /* Styling for each feature card */
 .feature-card {
-  border-radius: 20px;
+  border-radius: 10px;
   height: auto; /* Allow the height to adjust automatically based on content */
-  padding: 20px; /* Reduced padding for smaller cards */
-  width: calc(25% - 40px); /* Four cards in a row by default */
+  padding: 10px; /* Reduced padding for smaller cards */
+  width: calc(20% - 30px); /* Five cards in a row by default */
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -47,35 +48,34 @@
 .feature-image {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  padding: 10px; /* Add padding inside the image area */
+  margin-bottom: 15px; /* Reduced margin */
+  border-radius: 8px; /* Reduced border-radius */
 }
 
 /* Icon container styling */
 .icon-container {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin */
 }
 
 /* Title of each feature card */
 .card-title {
   color: #1B1F3B;
-  font-size: 22px;
+  font-size: 18px; /* Reduced font size */
   margin-bottom: 10px;
 }
 
 /* Description of each feature card */
 .card-description {
   color: #1B1F3B;
-  font-size: 14px; /* Reduced font size for smaller description */
+  font-size: 12px; /* Reduced font size */
   line-height: 1.4;
   margin-bottom: 10px;
 }
 
 /* Extra description styling */
 .extra-description {
-  font-size: 12px; /* Smaller font size for extra content */
+  font-size: 10px; /* Smaller font size for extra content */
   color: #555;
   margin-top: 10px;
   line-height: 1.5;
@@ -113,7 +113,7 @@
     font-size: 40px; /* Adjust title font size */
   }
   .card-title {
-    font-size: 20px; /* Adjust card title font size */
+    font-size: 16px; /* Adjust card title font size */
   }
   .card-description {
     font-size: 12px; /* Adjust card description font size */
@@ -132,7 +132,7 @@
     font-size: 30px; /* Adjust title font size */
   }
   .card-title {
-    font-size: 18px; /* Adjust card title font size */
+    font-size: 14px; /* Adjust card title font size */
   }
   .card-description {
     font-size: 12px; /* Adjust card description font size */

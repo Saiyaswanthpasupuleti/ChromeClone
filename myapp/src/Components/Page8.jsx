@@ -38,10 +38,9 @@ const Page8 = () => {
   };
 
   useEffect(() => {
-    // Initialize GSAP animation for expanding/collapsing the answer
     faqs.forEach((_, index) => {
       if (answerRefs.current[index]) {
-        gsap.set(answerRefs.current[index], { height: 0, autoAlpha: 0 }); // Start with collapsed state
+        gsap.set(answerRefs.current[index], { height: 0, autoAlpha: 0 });
       }
     });
   }, []);

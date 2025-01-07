@@ -6,6 +6,7 @@
   padding: 50px;
   gap: 40px; /* Add space between text and image */
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  background-color: #ffffff; /* Set background color to white */
 }
 
 /* Text container styles */

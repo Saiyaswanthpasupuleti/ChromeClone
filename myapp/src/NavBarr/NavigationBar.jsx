@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Navbar.css';
 import myimage from "../assets/Google_Chrome_icon_(February_2022).svg.webp";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true); // Track navbar visibility
+  const navbarRef = useRef(null);
 
   useEffect(() => {
     // Animate navbar links for larger screens
@@ -13,6 +15,18 @@ const Navbar = () => {
       { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.2 }
     );
+
+    // Handle navbar visibility on scroll
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsNavbarVisible(scrollY <= 50); // Hide when scrolled past 50px (adjust as needed)
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -34,7 +48,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isNavbarVisible ? '' : 'hidden'}`} ref={navbarRef}>
       <div className="navbar-logo">
         <img src={myimage} alt="Chrome Logo" />
         <a href="/" style={{ color: "#090909" }}>Chrome</a>

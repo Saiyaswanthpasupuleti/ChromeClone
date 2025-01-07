@@ -1,12 +1,12 @@
 .page1-container {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #E2F0FB; /* Applying the same background color to the container */
+    background-color: #ffffff; /* Change background color to white */
 }
 
 /* Hero Section */
 .hero-section-unique {
-    background: #E2F0FB; /* Apply the same background color to hero section */
+    background: #ffffff; /* Change background color to white */
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -68,7 +68,7 @@
     width: 100%;
     overflow: hidden;
     padding: 2rem 0;
-    background: #E2F0FB; /* Applying the same background color to the scroll section */
+    background: #ffffff; /* Change background color to white */
 }
 
 .scrollable-images-unique {

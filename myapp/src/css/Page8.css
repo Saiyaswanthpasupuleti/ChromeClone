@@ -1,112 +1,110 @@
 /* General Page Styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E3F2FD; /* Apply the light blue background to the entire page */
-    color: #333; /* Default text color for the whole page */
-  }
-  
-  /* Container Styling for FAQ Section */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF; /* White background */
+  color: #333; /* Default text color */
+}
+
+/* Container Styling for FAQ Section */
+.faq-container {
+  text-align: left;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 50px auto; /* Centered with spacing */
+  background-color: #FFFFFF; /* White background for the FAQ container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* FAQ List */
+.faq-list {
+  margin-top: 20px;
+}
+
+/* Individual FAQ Items */
+.faq-item {
+  border-bottom: 1px solid #ccc; /* Soft gray divider */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+/* Question Styling */
+.question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0073e6; /* Blue text */
+  transition: color 0.3s ease;
+}
+
+.question:hover {
+  color: #005bb5; /* Darker blue on hover */
+}
+
+/* Plus Icon */
+.plus-icon {
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0073e6;
+}
+
+.plus-icon.open {
+  transform: rotate(45deg);
+  color: #005bb5;
+}
+
+/* Answer Styling */
+.answer {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; /* Dark gray */
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Header Styling */
+h2 {
+  font-size: 2rem;
+  color: #0073e6;
+  text-align: center;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
   .faq-container {
-    text-align: left;
-    padding: 50px;
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 50px auto; /* Add margin for spacing */
-    background-color: #f0f0f0; /* Light gray background for the FAQ container */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    padding: 20px;
   }
-  
-  /* FAQ List */
-  .faq-list {
-    margin-top: 20px;
-  }
-  
-  /* Individual FAQ Items */
-  .faq-item {
-    border-bottom: 1px solid #ccc; /* Soft gray divider */
-    margin-bottom: 15px;
-    padding-bottom: 10px; /* Add spacing between items */
-  }
-  
-  /* Question Styling */
+
   .question {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #0073e6; /* Blue main text color */
-    transition: color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .question:hover {
-    color: #005bb5; /* Darker blue on hover */
-  }
-  
-  /* Plus Icon */
-  .plus-icon {
-    transition: transform 0.3s ease-in-out, color 0.3s ease; /* Smooth rotation and hover */
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0073e6; /* Blue for the plus icon */
-  }
-  
-  .plus-icon.open {
-    transform: rotate(45deg); /* Rotate icon when open */
-    color: #005bb5; /* Darker blue when active */
-  }
-  
-  /* Answer Styling */
-  .answer {
-    margin-top: 10px;
     font-size: 1rem;
-    line-height: 1.5;
-    color: #333; /* Dark gray for the answer text */
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
   }
-  
-  /* Header Styling (optional) */
-  h2 {
-    font-size: 2rem;
-    color: #0073e6; /* Same blue color for headings */
-    text-align: center;
+
+  .plus-icon {
+    font-size: 1.2rem;
   }
-  
-  /* Add responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .faq-container {
-      padding: 20px;
-    }
-  
-    .question {
-      font-size: 1rem;
-    }
-  
-    .plus-icon {
-      font-size: 1.2rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .faq-container {
+    padding: 15px;
   }
-  
-  /* Mobile styling */
-  @media (max-width: 480px) {
-    .faq-container {
-      padding: 15px;
-    }
-  
-    .question {
-      font-size: 0.9rem;
-    }
-  
-    .plus-icon {
-      font-size: 1rem;
-    }
+
+  .question {
+    font-size: 0.9rem;
   }
-  
+
+  .plus-icon {
+    font-size: 1rem;
+  }
+}

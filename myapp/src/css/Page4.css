@@ -6,6 +6,7 @@
   gap: 40px;
   padding: 20px;
   flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  background-color: #ffffff; /* Set background color to white */
 }
 
 /* Image container styles */
@@ -17,8 +18,8 @@
 }
 
 .page4-image-container img {
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
   max-height: 600px;
 }
 
@@ -28,10 +29,11 @@
   border-left: 2px solid #ccc;
   padding-left: 30px;
   text-align: left;
+  background-color: #ffffff; /* Set background color to white for the text container */
 }
 
 .page4-heading {
-  font-size: 24px; 
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
